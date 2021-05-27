@@ -2,37 +2,40 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="{% static 'css/all.css' %}">
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-        <!-- Custom -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <!-- Lightbox -->
-        <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
-        <title>Real Estate</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <title>Real Estate</title>
 </head>
+
 <body>
-        <!-- Top Bar -->
-        {% include 'partials/_topbar.html' %}
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
 
-        <!-- Nav Bar -->
-        {% include 'partials/_navbar.html' %}
+    <!-- Nav Bar -->
+    {% include 'partials/_navbar.html' %}
 
-                <!-- Main Content -->
-                
-        {% block content %} {% endblock %}
+    <!-- Main Content -->
 
-        <!-- Footer -->
-        {% include 'partials/_footer.html' %}
+    {% block content %} {% endblock %}
 
-       <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
-       <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
-       <script src="{% static 'js/main.js' %} "></script>
-       <script src="{% static 'js/lightbox.min.js' %} "></script>
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/main.js' %} "></script>
+    <script src="{% static 'js/lightbox.min.js' %} "></script>
 </body>
+
 </html>
