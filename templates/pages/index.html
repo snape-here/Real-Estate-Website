@@ -15,7 +15,7 @@
                     quas, asperiores eveniet vel nostrum magnam
                     voluptatum tempore! Consectetur, id commodi!</p>
                 <div class="search">
-                    <form action="search.html">
+                    <form action="{% url 'search' %}">
                         <!-- Form Row 1 -->
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
@@ -34,44 +34,9 @@
                                 <select name="state" class="form-control">
                                     <option selected="true" disabled="disabled">
                                         State (All)</option>
-                                    <option value="AN">Andaman and Nicobar Islands
-                                    </option>
-                                    <option value="AP">Andhra Pradesh</option>
-                                    <option value="AR">Arunachal Pradesh</option>
-                                    <option value="AS">Assam</option>
-                                    <option value="BR">Bihar</option>
-                                    <option value="CH">Chandigarh</option>
-                                    <option value="CT">Chattisgarh</option>
-                                    <option value="DN">Dadra and Nagar Haveli
-                                    </option>
-                                    <option value="DD">Daman and Diu</option>
-                                    <option value="DL">Dekhi</option>
-                                    <option value="GA">Goa</option>
-                                    <option value="GJ">Gujarat</option>
-                                    <option value="HR">Haryana</option>
-                                    <option value="HP">Himachal Pradesh</option>
-                                    <option value="JK">Jammu and Kashmir</option>
-                                    <option value="JH">Jharkhand</option>
-                                    <option value="KA">Karnataka</option>
-                                    <option value="KL">Kerala</option>
-                                    <option value="LD">Lakshwadeep</option>
-                                    <option value="MP">Madhya Pradesh</option>
-                                    <option value="MH">Maharashtra</option>
-                                    <option value="MN">Manipur</option>
-                                    <option value="ML">Meghalaya</option>
-                                    <option value="MZ">Mizoram</option>
-                                    <option value="NL">Nagaland</option>
-                                    <option value="OR">Odisha</option>
-                                    <option value="PY">Puducherry</option>
-                                    <option value="PB">Punjab</option>
-                                    <option value="RJ">Rajashthan</option>
-                                    <option value="SK">Sikkim</option>
-                                    <option value="TN">Tamil Nadu</option>
-                                    <option value="TG">Telangana</option>
-                                    <option value="TR">Tripura</option>
-                                    <option value="UP">Uttar Pradesh</option>
-                                    <option value="UT">Uttarakhand</option>
-                                    <option value="WB">West Bengal</option>
+                                    {% for key,value in state_choices.items %}
+                                        <option value="{{ key }}">{{ value }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
@@ -82,32 +47,18 @@
                                 <select name="bedrooms" class="form-control">
                                     <option selected="true" disabled="disabled">
                                         Bedrooms (All)</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
+                                    {% for key,value in bedroom_choices.items %}
+                                        <option value="{{ key }}">{{ value }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <select name="price" class="form-control" id="type">
                                     <option selected="true" disabled="disabled">Max
                                         Price (Any)</option>
-                                    <option value="100000">$100,000</option>
-                                    <option value="200000">$200,000</option>
-                                    <option value="300000">$300,000</option>
-                                    <option value="400000">$400,000</option>
-                                    <option value="500000">$500,000</option>
-                                    <option value="600000">$600,000</option>
-                                    <option value="700000">$700,000</option>
-                                    <option value="800000">$800,000</option>
-                                    <option value="900000">$900,000</option>
-                                    <option value="1000000">$1M+</option>
+                                    {% for key,value in price_choices.items %}
+                                        <option value="{{ key }}">{{ value }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                         </div>
