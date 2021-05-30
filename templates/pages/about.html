@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
-                <h1 class="display-4">About BT Real Estate</h1>
+                <h1 class="display-4">About Real Estate Co.</h1>
                 <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
                     pariatur!</p>
             </div>
@@ -51,7 +51,7 @@
                 {% if mvp_realtors %}
                     {% for realtor in mvp_realtors %}
                         <div class="card">
-                            <img class="card-img-top" src="{{realtor.photo.url}}" alt="Seller of the month">
+                            <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
                             <div class="card-body">
                                 <h5 class="card-title">Seller Of The Month</h5>
                                 <h6 class="text-secondary">{{realtor.name}}</h6>
@@ -72,7 +72,7 @@
     <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit aperiam, unde aliquid at similique!
     </h4>
     <hr>
-    <a href="listings.html" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
 </section>
 
 <!-- Team -->
