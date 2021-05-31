@@ -20,4 +20,4 @@ GitHub. If you find a problem and wish to report it, please file a bug.
 
 Looking for a good first bug to work on? Take a look at our project and file an issue and then work on it if it's assigned to you.
 
-[gh-real-estate-website: https://github.com/snape-here/Real-Estate-Website
+[gh-real-estate-website]: https://github.com/snape-here/Real-Estate-Website
